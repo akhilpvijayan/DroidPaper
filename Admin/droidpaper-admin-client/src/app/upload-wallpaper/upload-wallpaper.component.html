@@ -1,0 +1,9 @@
+<div class="upload-container">
+    <input type="file" (change)="onFileChange($event)" />
+    <input type="text" placeholder="Category" [(ngModel)]="category" />
+    <input type="text" placeholder="Tags (comma separated)" [(ngModel)]="tags" />
+    <button (click)="upload()" [disabled]="uploading">
+      {{ uploading ? 'Uploading...' : 'Upload' }}
+    </button>
+  </div>
+  
